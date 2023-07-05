@@ -13,11 +13,19 @@ Se tiene StoreTest.java, que es el archivo que corresponde a las pruebas unitari
 
 Para compilar el programa, primero hay que colocarse en la carpeta src, y en la línea de comandos colocar el siguiente comando:
 
-javac com/gamestore/models/Game.java com/gamestore/Store.java com/gamestore/GameStoreSimulator.java com/gamestore/Main.java
+    javac com/gamestore/models/Game.java com/gamestore/Store.java com/gamestore/GameStoreSimulator.java com/gamestore/Main.java
 
 Para correr el programa, hay que colocarse en la carpeta raíz del proyecto y colocar el siguiente comando:
 
-java -cp src com.gamestore.Main
+    java -cp src com.gamestore.Main
 
 Para compilar el archivo de pruebas hay que colocarse en la carpeta raíz del proyecto y colocar el siguiente comando:
+
+    javac -cp lib/junit.jar:lib/hamcrest.jar -d bin src/com/gamestore/*.java test/com/gamestore/StoreTest.java
+
+Para correr el archivo de pruebas se debe ejecutar el siguiente comando:
+
+    java -cp lib/junit.jar:lib/hamcrest.jar:bin org.junit.runner.JUnitCore com.gamestore.StoreTest
+
+  
 
